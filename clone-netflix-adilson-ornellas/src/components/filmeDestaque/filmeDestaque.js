@@ -23,9 +23,6 @@ function FilmeDestaque() {
     });
   }, []); 
 
-  function truncate(str, n) {
-    return str?.length > n ? str.substring(0, n - 1) + "..." : str;
-  }
   return (
     <header
       className="conteinerfilmeDestaque"
@@ -43,9 +40,6 @@ function FilmeDestaque() {
         <div className="buttonsFilmeDestaqueConteiner">
           <button className="buttonFilmeDestaque">Assistir</button>
           <button className="buttonFilmeDestaque">Minha Lista</button>
-        </div>
-        <div className="descriçãoFilmeDestaque">
-          <h2>{truncate(filmes?.overview, 150)}</h2>
         </div>
       </div>
     </header>
