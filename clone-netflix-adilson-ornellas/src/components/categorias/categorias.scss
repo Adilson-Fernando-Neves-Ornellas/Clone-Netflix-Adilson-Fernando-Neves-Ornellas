@@ -3,21 +3,50 @@
     background-color: black;
     .tituloCategorias{
         color: white;
+        font-size: 25px;
+        @media (min-width: 1921px) {
+            font-size: 50px !important;
+        }
+        @media (min-width: 1025px) {
+            font-size: 35px;
+        }
     }
-    .cardFilme{
+    .caroselFilmes{
         display: flex;
         overflow-y: hidden;
         overflow-x: scroll;
         padding: 20px;
         gap: 10px;
+        object-fit: contain;
         &::-webkit-scrollbar{
             display: none;
         }
         .imgFilme{
             width: 100%;
-            max-height: 100px;
+            max-height: 150px;
             margin-bottom: 10px;
             transition: transform 450ms;
+            @media (min-width: 1921px) {
+                max-height: 300px !important;
+            }
+            @media (min-width: 1025px) {
+                max-height: 225px;
+            }
+            &:hover{
+                transform: scale(1.10)
+            }
+        }
+        .imgFilmeMaior{
+            width: 100%;
+            max-height: 300px;
+            margin-bottom: 10px;
+            transition: transform 450ms;
+            @media (min-width: 1921px) {
+                max-height: 600px !important;
+            }
+            @media (min-width: 1025px) {
+                max-height: 450px;
+            }
             &:hover{
                 transform: scale(1.10)
             }
