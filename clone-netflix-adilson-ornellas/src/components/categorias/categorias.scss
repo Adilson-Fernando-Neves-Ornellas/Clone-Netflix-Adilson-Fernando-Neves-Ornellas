@@ -1,0 +1,26 @@
+.contaneirCategorias{
+    margin-left: 20px;
+    background-color: black;
+    .tituloCategorias{
+        color: white;
+    }
+    .cardFilme{
+        display: flex;
+        overflow-y: hidden;
+        overflow-x: scroll;
+        padding: 20px;
+        gap: 10px;
+        &::-webkit-scrollbar{
+            display: none;
+        }
+        .imgFilme{
+            width: 100%;
+            max-height: 100px;
+            margin-bottom: 10px;
+            transition: transform 450ms;
+            &:hover{
+                transform: scale(1.10)
+            }
+        }
+    }
+}

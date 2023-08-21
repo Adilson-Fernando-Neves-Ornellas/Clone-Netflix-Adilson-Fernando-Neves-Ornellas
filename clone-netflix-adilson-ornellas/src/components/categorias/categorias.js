@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { filmes } from "../api/apiCategorias";
+import "./categorias.scss"
 
 const imgHost = "https://image.tmdb.org/t/p/original/"
 
@@ -27,7 +28,12 @@ function Categorias ({title,path}) {
             <div className="cardFilme">
                 {filme?.map((filme) => {
                     return (
-                        <img key={filme.id} src={`${imgHost}${filme.poster_path}`} alt= {filme.name} ></img>
+                        <img 
+                            className="imgFilme"
+                            key={filme.id}
+                            src={`${imgHost}${filme.poster_path}`}
+                            alt= {filme.name}
+                        ></img>
                     )
                 })}
             </div>

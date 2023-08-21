@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import reportWebVitals from './reportWebVitals';
 
+import "./index.scss"
 import apiCategorias from './components/api/apiCategorias';
 import Categorias from './components/categorias/categorias';
 
