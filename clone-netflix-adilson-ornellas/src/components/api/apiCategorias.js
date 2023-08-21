@@ -1,6 +1,6 @@
 const chaveApi = "8ff8235ec2a961b906a47f849db24d94"
 
-const categorias = [{
+const apiCategorias = [{
     name: "trending",
     title: "Em alta",
     path: `/trending/all/week?api_key=${chaveApi}&language=pt-BR`,
@@ -38,14 +38,14 @@ const categorias = [{
   }
 ];
 
-export const movies = async (path) => {
+export const filmes = async (path) => {
   try {
     let url = `https://api.themoviedb.org/3${path}`;
     const respostaApi = await fetch(url);
     return await respostaApi.json();
   } catch (error) {
-    console.log("error movies, na api.js ao buscar informações da api: ", error);
+    console.log("error filmes, na api.js ao buscar informações da api: ", error);
   }
 };
 
-export default categorias;
+export default apiCategorias;
