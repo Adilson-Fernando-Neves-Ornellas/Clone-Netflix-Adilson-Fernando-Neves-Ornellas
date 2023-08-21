@@ -32,7 +32,7 @@ function Categorias ({ title, path}) {
                         <img 
                             className={`imgFilme ${title === "Em alta" &&  "imgFilmeMaior"}`}
                             key={filme.id}
-                            src={`${imgHost}${filme.poster_path}`}
+                            src={`${imgHost}${title === "Em alta" ? filme.backdrop_path : filme.poster_path }`}
                             alt= {filme.name}
                         ></img>
                     )
